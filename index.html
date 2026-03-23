@@ -34,6 +34,15 @@
   </div>
 </nav>
 
+    <div id="navbar"></div>
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
     <!-- ================= HERO SECTION ================= -->
 
 <section class="p-5 bg-white"> <!--sobre mi-->
