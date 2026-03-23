@@ -1,0 +1,22 @@
+/* Cambia el fondo general */
+body {
+    background-color: #f8f9fa; /* Gris claro Bootstrap */
+     font-family: 'Segoe UI', sans-serif;
+}
+
+/* Personaliza títulos */
+h1, h2 {
+    font-weight: bold; /* Hace el texto más grueso */
+        font-weight: 300;
+
+}
+
+/* Efecto hover para tarjetas */
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente tamaño */
+    transition: 0.3s ease; /* Animación suave */
+}
+
+section {
+    padding: 80px 0;
+}
