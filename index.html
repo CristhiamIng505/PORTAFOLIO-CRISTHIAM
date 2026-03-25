@@ -191,13 +191,14 @@
 
      <div id="navbar"></div>
 
-<script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    });
-</script>
+  <script>
+    // Cargar el contenido de navbar.html dentro del div con id="navbar"
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>
