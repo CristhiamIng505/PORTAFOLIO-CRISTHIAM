@@ -24,16 +24,30 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Cristhiam Muñoz</a>
+    <!-- Logo/Nombre → siempre lleva al inicio -->
+    <a class="navbar-brand" href="index.html">Cristhiam Muñoz</a>
 
-    <div>
-      <a class="nav-link d-inline text-white" href="sobre-mi.html">Sobre mí</a>
-      <a class="nav-link d-inline text-white" href="proyectos.html">Proyectos</a>
-      <a class="nav-link d-inline text-white" href="contacto.html">Contacto</a>
+    <!-- Botón para menú responsive en móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="proyectos.html">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
-
     <!-- ================= HERO SECTION ================= -->
 
 <section class="p-5 bg-white"> <!--sobre mi-->
@@ -133,12 +147,36 @@
         </div>
     </section>
 
+     <!-- Sección de noticias / temas de interés -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Noticias y Tendencias</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Inteligencia Artificial</h5>
+        <p>Últimas tendencias en IA aplicadas a negocios.</p>
+        <a href="#" class="btn btn-outline-primary">Proximamente...</a>
+      </div>
+      <div class="col-md-4">
+        <h5>Transformación Digital</h5>
+        <p>Cómo las empresas están adaptando sus procesos.</p>
+        <a href="#" class="btn btn-outline-primary">Proximamente...</a>
+      </div>
+      <div class="col-md-4">
+        <h5>Ciberseguridad</h5>
+        <p>Buenas prácticas para proteger datos y sistemas.</p>
+        <a href="#" class="btn btn-outline-primary">Proximamente...</a>
+      </div>
+    </div>
+  </section>
+
+
     <!-- ================= FOOTER ================= -->
     <footer class="bg-primary text-white text-center p-3">
     <!-- bg-primary: aplica el color azul principal de Bootstrap -->
     <!-- text-white: hace el texto blanco -->
     <!-- text-center: centra el texto horizontalmente -->
     <!-- p-3: agrega padding interno -->
+     
 
     <p>&copy; 2022 Cristian Muñoz </p>
     <!-- &copy; genera el símbolo de copyright -->
@@ -150,5 +188,16 @@
 
     <!-- Script personalizado -->
      <script src="js/script.js"></script>
+
+     <div id="navbar"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
 </body>
 </html>
